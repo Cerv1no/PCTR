@@ -1,11 +1,21 @@
 import java.util.Arrays;
-
+/**
+ * Esta clase realiza el producto escalar de dos vectores de forma paralela y mide el tiempo en ms
+ * @author Álvaro Álvarez Cerviño
+ * @version 02/11/22
+ */
 public class prodEscalarParalelo extends Thread{
     int id, inicio, fin;
     static int[] vector1 = new int[(int)Math.pow(10, 6)];
     static int[] vector2 = new int[(int)Math.pow(10, 6)];
     static int[] productoParcial;
 
+    /**
+     * Método constructor parametrizado
+     * @param idHebra identificador de la hebra
+     * @param inicio índice de inicio
+     * @param fin índice de final
+     */
     public prodEscalarParalelo(int idHebra, int inicio, int fin)
     {
         this.id = idHebra;
@@ -13,6 +23,9 @@ public class prodEscalarParalelo extends Thread{
         this.fin = fin;
     }
 
+    /**
+     * Método de la hebra que realiza el producto escalar del rango dado
+     */
     public void run () {
         for (int i = inicio; i <= fin; i++) {
             productoParcial[id] += (vector1[i] * vector2[i]);
