@@ -1,3 +1,8 @@
+/**
+ * Esta clase realiza el producto escalar de dos vectores de forma secuencial y mide el tiempo en ms
+ * @author Álvaro Álvarez Cerviño
+ * @version 02/11/22
+ */
 public class prodEscalar {
     public static void main (String[] args) {
         int [] vector1 = new int[(int) Math.pow(10,6)];
