@@ -1,5 +1,9 @@
 import java.util.Random;
-
+/**
+ * Esta clase realiza la multiplicación matriz vector de forma concurrente mediante la división de nube de datos
+ * @author Álvaro Álvarez Cerviño
+ * @version 2222.0
+ */
 public class matVectorConcurrente implements Runnable{
     static int n = 30000;
     int inicio, fin;
@@ -7,8 +11,16 @@ public class matVectorConcurrente implements Runnable{
     static int [] vectorOut = new int[n];
     static int [] vectorIn = new int[n];
 
+    /**
+     * Método constructor parametrizado
+     * @param inicio índice de inicio
+     * @param fin índice de final
+     */
     public matVectorConcurrente(int inicio, int fin) {this.inicio = inicio; this.fin = fin;}
 
+    /**
+     * Método de la hebra que realiza la múltiplicación matriz/vector del rango asignado
+     */
     public void run () {
         for (int i = inicio; i < fin; i++) {
             int aux = 0;
