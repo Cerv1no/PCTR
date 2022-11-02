@@ -1,5 +1,9 @@
 import java.util.Random;
-
+/**
+ * Esta clase realiza la multiplicación de matriz vector de forma secuencial y mide el tiempo en ms
+ * @author Álvaro Álvarez Cerviño
+ * @version 02/11/22
+ */
 public class matVector {
     public static void main (String[] args) {
         int n = 30000;
