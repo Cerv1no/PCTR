@@ -1,16 +1,17 @@
 import java.util.Random;
 /**
- * Esta clase realiza la multiplicación de matriz vector de forma secuencial y mide el tiempo en ms
+ * Esta clase realiza la multiplicación de matriz/matriz de forma secuencial y mide el tiempo en ms
  * @author Álvaro Álvarez Cerviño
- * @version 02/11/22
+ * @version 15/11/22
  */
 public class prodMatricesSecuencial {
     public static void main (String[] args) {
-        int n = 30000;
+        int n = 10000;
         int [][] matriz1 = new int[n][n];
         int [][] matriz2 = new int[n][n];
         int [][] outMatriz = new int[n][n];
 
+        //Rellenamos ambas matrices con numeros aleatorios de 0 al 99
         Random generador = new Random();
         for (int i = 0; i < n; i++) {
             for (int j = 0; j < n; j++){
